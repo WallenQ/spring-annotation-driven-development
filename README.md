@@ -14,8 +14,8 @@ com.spring.annotation.yuesj---岳少俊文件目录
 
 注解解析
 -----------------------------------
-1.@Configuration 用于标注配置类
-2.@Bean
-3.@Scope 设置作用域 ①.prototype(多例) ②.single(单例，默认)
-4.@Lazy 懒加载
-5.@Conditional
+1.@Configuration 用于标注配置类  
+2.@Bean  
+3.@Scope 设置作用域 ①.prototype(多例) ②.single(单例，默认)  
+4.@Lazy 懒加载  
+5.@Conditional  
