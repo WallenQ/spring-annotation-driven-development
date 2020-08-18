@@ -6,5 +6,5 @@ package com.spring.annotation.yuesj.bean;
  * @version 1.0
  * @date 2020/8/9 11:17
  */
-public class Red {
+public class YueColor {
 }

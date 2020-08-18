@@ -1,6 +1,6 @@
 package com.spring.annotation.yuesj.config;
 
-import com.spring.annotation.yuesj.bean.Person;
+import com.spring.annotation.yuesj.bean.YuePerson;
 import org.springframework.context.annotation.*;
 
 /**
@@ -20,14 +20,14 @@ import org.springframework.context.annotation.*;
  * FilterType.REGEX：使用正则指定
  * FilterType.CUSTOM：使用自定义规则
  */
-public class SpringConfiguration1 {
+public class YueSpringConfiguration1 {
 
     /**
      * 给容器注册一个bean,id默认是方法名
      * @return
      */
     @Bean(value = "person")
-    public Person person01(){
-        return new Person("小明",24);
+    public YuePerson person01(){
+        return new YuePerson("小明",24);
     }
 }

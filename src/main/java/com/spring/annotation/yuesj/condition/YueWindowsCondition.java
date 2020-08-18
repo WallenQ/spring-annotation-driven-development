@@ -6,12 +6,12 @@ import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
- * WindowsCondition
+ * YueWindowsCondition
  * @author yuesj
  * @version 1.0
  * @date 2020/8/5 18:32
  */
-public class WindowsCondition implements Condition {
+public class YueWindowsCondition implements Condition {
 
 
 	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {

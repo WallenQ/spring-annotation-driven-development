@@ -12,7 +12,7 @@ import java.io.IOException;
  * @version 1.0
  * @date 2020/8/5 19:43
  */
-public class MyTypeFilter implements TypeFilter {
+public class YueMyTypeFilter implements TypeFilter {
 
     public boolean match(MetadataReader metadataReader,
                          MetadataReaderFactory metadataReaderFactory) throws IOException {

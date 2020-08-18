@@ -1,10 +1,11 @@
 package com.spring.annotation.yuesj.config;
 
-import com.spring.annotation.yuesj.bean.Color;
-import com.spring.annotation.yuesj.bean.Person;
-import com.spring.annotation.yuesj.condition.LinuxCondition;
-import com.spring.annotation.yuesj.condition.MyImportSelector;
-import com.spring.annotation.yuesj.condition.WindowsCondition;
+import com.spring.annotation.yuesj.bean.YueColor;
+import com.spring.annotation.yuesj.bean.YuePerson;
+import com.spring.annotation.yuesj.condition.YueLinuxCondition;
+import com.spring.annotation.yuesj.condition.YueMyImportBeanDefinitionRegistrar;
+import com.spring.annotation.yuesj.condition.YueMyImportSelector;
+import com.spring.annotation.yuesj.condition.YueWindowsCondition;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.*;
 
@@ -16,8 +17,8 @@ import org.springframework.context.annotation.*;
  */
 @Configuration
 @ComponentScan("com.spring.annotation.yuesj")
-@Import({Color.class,MyImportSelector.class})
-public class SpringConfiguration2 {
+@Import({YueColor.class,YueMyImportSelector.class,YueMyImportBeanDefinitionRegistrar.class})
+public class YueSpringConfiguration2 {
 
 
     /**
@@ -40,12 +41,11 @@ public class SpringConfiguration2 {
      * 		懒加载：容器启动不创建对象。第一次使用(获取)Bean创建对象，并初始化；
      *
      */
-    @Scope()
-    @Lazy
+    @Scope("prototype")
     @Bean()
-    public Person person(){
+    public YuePerson person(){
         System.out.println("给容器中添加Person... ");
-        return new Person("小明",24);
+        return new YuePerson("小蓝",28);
     }
 
     /**
@@ -54,15 +54,15 @@ public class SpringConfiguration2 {
      * 如果系统是windows，给容器中注册("bill")
      * 如果是linux系统，给容器中注册("linus")
      */
-    @Conditional(WindowsCondition.class)
+    @Conditional(YueWindowsCondition.class)
     @Bean("bill")
-    public Person person01(){
-        return new Person("Bill Gates",62);
+    public YuePerson person01(){
+        return new YuePerson("Bill Gates",62);
     }
 
-    @Conditional(LinuxCondition.class)
+    @Conditional(YueLinuxCondition.class)
     @Bean("linus")
-    public Person person02(){
-        return new Person("linus", 48);
+    public YuePerson person02(){
+        return new YuePerson("linus", 48);
     }
 }

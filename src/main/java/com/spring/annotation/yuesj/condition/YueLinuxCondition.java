@@ -8,12 +8,12 @@ import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
- * LinuxCondition
+ * YueLinuxCondition
  * @author yuesj
  * @version 1.0
  * @date 2020/8/5 18:32
  */
-public class LinuxCondition implements Condition {
+public class YueLinuxCondition implements Condition {
 
 	/**
 	 * ConditionContext：判断条件能使用的上下文（环境）

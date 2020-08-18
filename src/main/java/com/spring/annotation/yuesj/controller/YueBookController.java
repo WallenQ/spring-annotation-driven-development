@@ -9,5 +9,5 @@ import org.springframework.stereotype.Controller;
  * @date 2020/8/5 18:26
  */
 @Controller
-public class BookController {
+public class YueBookController {
 }

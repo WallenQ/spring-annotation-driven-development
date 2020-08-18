@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
  * @date 2020/8/5 18:32
  */
 @Repository
-public interface BookDao {
+public interface YueBookDao {
 }

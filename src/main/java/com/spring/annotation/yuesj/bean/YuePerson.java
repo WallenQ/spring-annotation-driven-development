@@ -6,7 +6,7 @@ package com.spring.annotation.yuesj.bean;
  * @version 1.0
  * @date 2020/8/4 21:26
  */
-public class Person {
+public class YuePerson {
     private String name;
     private Integer age;
 
@@ -26,14 +26,14 @@ public class Person {
         this.age = age;
     }
 
-    public Person(String name, Integer age) {
+    public YuePerson(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "YuePerson{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
