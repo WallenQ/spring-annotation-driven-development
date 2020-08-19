@@ -16,7 +16,10 @@ com.spring.annotation.yuesj---岳少俊文件目录
 -----------------------------------
 1.@Configuration 用于标注配置类  
 2.@Bean  
-3.@Scope 设置作用域 ①.prototype(多例) ②.single(单例，默认)  
+    生命周期：
+3.@Scope 设置作用域   
+    ①.prototype(多例)：在每次获取的时候创建对象
+    ②.single(单例，默认)：在容器启动的时候创建对象
 4.@Lazy 懒加载  
 5.@Conditional 按照一定条件进行判断，满足条件给容器中注册Bean  
 6.@Import 快速给容器导入一个容器  
