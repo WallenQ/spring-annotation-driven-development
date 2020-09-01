@@ -9,5 +9,21 @@ import org.springframework.stereotype.Repository;
  * @date 2020/8/5 18:32
  */
 @Repository
-public interface YueBookDao {
+public class YueBookDao {
+    private String label = "0";
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    @Override
+    public String toString() {
+        return "YueBookDao{" +
+                "label='" + label + '\'' +
+                '}';
+    }
 }
